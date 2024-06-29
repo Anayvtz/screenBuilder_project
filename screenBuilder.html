@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screen builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        #empty {
+            background-color: white;
+            width: 70vw;
+            height: 100vh;
+        }
+
+        #empty #whiteBox {
+            width: 60vw;
+            height: 80vh;
+            background-color: white;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            margin: 100px auto;
+        }
+
+        #main {
+            background-color: black;
+            color: white;
+            width: 30vw;
+            /* height: fit-content; */
+            height: 100%;
+            padding: 30px;
+        }
+
+        #main p {
+            margin: 30px 0px;
+        }
+
+        #main form {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        #main form .box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        #main form .btns {
+            margin-top: 15px;
+            display: flex;
+        }
+
+        #main form .btns .btn {
+            width: 155px;
+            height: 25px;
+            border: none;
+            background-color: magenta;
+        }
+
+        #main form .btns .btn:hoover {
+            background-color: gray;
+            color: black;
+        }
+
+        #main form .btns #add {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="empty">
+            <div id="whiteBox"></div>
+        </div>
+        <section id="main">
+            <h1>Screen builder</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sed quam, possimus molestias ratione
+                sunt provident, incidunt totam, pariatur dolore esse delectus quis sapiente saepe?
+            </p>
+
+            <form action="">
+                <div class="box">
+                    <label for="etyp">element type</label>
+                    <select name="" id="etyp">
+                        <option value="">select an option</option>
+                        <option value="div">div</option>
+                        <option value="section">section</option>
+                        <option value="p">p</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <label for="bgc">background color</label>
+                    <input type="color" id="bgc">
+                </div>
+                <div class="box">
+                    <label for="wdth">width</label>
+                    <input type="number" id="wdth" placeholder="px">
+                </div>
+                <div class="box">
+                    <label for="hght">height</label>
+                    <input type="number" id="hght" placeholder="px">
+                </div>
+                <div class="box">
+                    <label for="content">content</label>
+                    <textarea name="" id="content" rows="5" maxlength="100"></textarea>
+                </div>
+                <div class="box">
+                    <label for="color">font color</label>
+                    <input type="color" name="" id="color">
+                </div>
+                <div class="box">
+                    <label for="font">font family</label>
+                    <select value="font" id="font">
+                        <option value="">select an option</option>
+                        <option value="arial">arial</option>
+                        <option value="david">david</option>
+                        <option value="thaoma">thaoma</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <label for="fontSz">font size</label>
+                    <input type="number" id="fontSz" placeholder="rem">
+                </div>
+                <div class="box">
+                    <label for="brdrWdth">border width</label>
+                    <input type="number" name="" id="brdrWdth" placeholder="px">
+                </div>
+                <div class="box">
+                    <label for="brdrTyp">border style</label>
+                    <select name="borderType" id="brdrTyp">
+                        <option value="">select an option</option>
+                        <option value="solid">solid</option>
+                        <option value="dashed">dashed</option>
+                        <option value="dotted">dotted</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <label for="brdrClr">border color</label>
+                    <input type="color" name="" id="brdrClr">
+                </div>
+                <div class="box">
+                    <label for="rounded">rounded corners</label>
+                    <input type="number" name="" id="rounded" placeholder="%">
+                </div>
+                <div class="box">
+                    <label for="pad">padding</label>
+                    <input type="number" name="" id="pad" placeholder="px">
+                </div>
+                <div class="box">
+                    <label for="mrgn">margin</label>
+                    <input type="number" name="" id="mrgn" placeholder="px">
+                </div>
+                <div class="btns">
+                    <input type="button" value="add" class="btn" id="add">
+                    <input type="button" value="clean" class="btn" id="cln">
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="screenBuilder.js"></script>
+</body>
+
+</html>
